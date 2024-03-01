@@ -19,6 +19,7 @@ func handleRequests() {
 	fmt.Println(port)
 
 	http.HandleFunc("/user", getUser)
+	http.HandleFunc("/", getUser)
 	fmt.Println("UserService is running on :8788")
 	http.ListenAndServe(port, nil)
 
