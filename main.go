@@ -20,7 +20,7 @@ func handleRequests() {
 
 	http.HandleFunc("/user", getUser)
 	http.HandleFunc("/", getUser)
-	fmt.Println("UserService is running on :8788")
+	fmt.Println("UserService is running on", port)
 	http.ListenAndServe(port, nil)
 
 }
